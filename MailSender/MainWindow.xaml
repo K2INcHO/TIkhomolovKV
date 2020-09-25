@@ -6,7 +6,105 @@
         xmlns:local="clr-namespace:MailSender"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
 
-    </Grid>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            Готов!
+        </StatusBar>
+
+        <TabControl>
+            <TabItem Header="Панели компоновки">
+                <TabControl>
+                    <TabItem Header="Grid">
+                        <Grid>
+                            <Button Margin="20,30,50,100" 
+                                    HorizontalAlignment="Left"
+                                    BorderThickness="20,10,0,5" 
+                                    Padding="40,20,10,0" 
+                                    HorizontalContentAlignment="Stretch" 
+                                    VerticalAlignment="Stretch">
+                                Hello World!
+                            </Button>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="StackPanel">
+                        <StackPanel>
+                            <Button Content="Hello World!"/>
+                            <Button Content="Кнопка 2" HorizontalAlignment="Left"
+                                    Margin="30,10,0,10"/>
+                            <Button Content="Кнопка 3" HorizontalAlignment="Center" Margin="130,0,0,0"/>
+                            <TextBox>User name</TextBox>
+                            
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Width="30" Height="10" Fill="Red"></Ellipse>
+                                <Rectangle Width="150" Fill="Blue" Margin="30,0,0,0"></Rectangle>
+                                <Button Padding="15,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="20" Height="13" Fill="Red"></Ellipse>
+                                        <TextBlock Text="Button 0"></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="DockPanel">
+                        <DockPanel>
+                            <Button DockPanel.Dock="Top">Кнопка 1</Button>
+                            <Button DockPanel.Dock="Right">Кнопка 2</Button>
+                            <Button DockPanel.Dock="Bottom" >Кнопка 3</Button>
+                            <Button>Кнопка 4</Button>
+                            <TextBox>123</TextBox>
+                            <Ellipse Fill="Blue" Stroke="Red" StrokeThickness="5"></Ellipse>
+                        </DockPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="UniformGrid">
+                        <UniformGrid Columns="2">
+                            <Button>Кнопка 1</Button>
+                            <Button>Кнопка 2</Button>
+                            <Button>Кнопка 3</Button>
+                            <Button>Кнопка 4</Button>
+                            <TextBox>123</TextBox>
+                            <ProgressBar Value="30"></ProgressBar>
+                            <WebBrowser Source="http://www.yandex.ru"></WebBrowser>
+                        </UniformGrid>
+                    </TabItem>
+                    
+                    <TabItem Header="WrapPanel">
+                        <WrapPanel Margin="5">
+                            <Button Margin="10,0" Padding="40,10">Кнопка 1</Button>
+                            <Button Margin="10,0" Padding="40,10">Кнопка 2</Button>
+                            <Button Margin="10,0" Padding="40,10">Кнопка 3</Button>
+                            <Button Margin="10,0" Padding="40,10">Кнопка 4</Button>
+                        </WrapPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="Canvas">
+                        <Canvas>
+                            <Button Canvas.Left="10" Canvas.Top="40">Кнопка!!!</Button>
+                            <Rectangle Fill="Red" Width="150" Height="80" Canvas.Left="20" Canvas.Bottom="50"></Rectangle>
+                            <Ellipse Canvas.Right="50" Canvas.Top="10" Fill="Blue" Width="200" Height="75"></Ellipse>
+                            <ProgressBar Canvas.Bottom="20" Canvas.Right="10" Width="150" Height="15" Value="40"></ProgressBar>
+                        </Canvas>
+                    </TabItem>
+                    
+                    <!--TabItem Header="VirtualizedStackPanel"></-->
+                </TabControl>
+            </TabItem>
+
+            <TabItem Header="Списки"></TabItem>
+            <TabItem Header="Планировщик"></TabItem>
+            <TabItem Header="Письма"></TabItem>
+            <TabItem Header="Статистика"></TabItem>
+        </TabControl>
+
+    </DockPanel>
 </Window>
