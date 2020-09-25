@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTests", "ConsoleTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTests", "WPFTests\WPFTests.csproj", "{C33A91C1-E2B5-4F69-87B3-F05CF3A3C224}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSender_TikhomolovKV", "MailSender_TikhomolovKV\MailSender_TikhomolovKV.csproj", "{44F8BE39-CC3C-40A2-8DBE-493D5E092CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{C33A91C1-E2B5-4F69-87B3-F05CF3A3C224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C33A91C1-E2B5-4F69-87B3-F05CF3A3C224}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C33A91C1-E2B5-4F69-87B3-F05CF3A3C224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44F8BE39-CC3C-40A2-8DBE-493D5E092CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F8BE39-CC3C-40A2-8DBE-493D5E092CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F8BE39-CC3C-40A2-8DBE-493D5E092CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F8BE39-CC3C-40A2-8DBE-493D5E092CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

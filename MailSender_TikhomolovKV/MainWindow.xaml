@@ -1,0 +1,73 @@
+﻿<Window x:Class="MailSender_TikhomolovKV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender_TikhomolovKV"
+        mc:Ignorable="d"
+        Title="Программа для автоматической отправки писем" Height="470" Width="750">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Помощь"></MenuItem>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            Готов!
+        </StatusBar>
+
+        <TabControl>
+            <TabItem Header="Отправка писем" Height="20" VerticalAlignment="Top">
+
+                <Grid>
+                    <Label Width="115" Height="25" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="top" Margin="50,20">Имя пользователя</Label>
+                    <TextBox x:Name="txbLogin" Width="250" Height="25" 
+                             VerticalContentAlignment="Center"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="top" Margin="170,20"></TextBox>
+
+                    <Label Width="115" Height="25" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="top" Margin="50,50">Пароль</Label>
+                    <PasswordBox x:Name="txbPassword" Width="250" Height="25"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="top" Margin="170,50"/>
+
+                    <Label Width="115" Height="25" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" Margin="50,120" Content="Адрес получателя"/>
+                    <TextBox x:Name="txbReceiverAddress" Width="250" Height="25" 
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Margin="170,120"/>
+
+                    <Label Width="115" Height="25" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" Margin="50,150" Content="Тема письма"/>
+                    <TextBox x:Name="txbTopic" Width="250" Height="25" 
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Margin="170,150"/>
+
+                    <Label Width="115" Height="25" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" Margin="50,180,0,0" Content="Текст письма"/>
+                    <TextBox x:Name="txbLetterText" Width="511" Height="112" 
+                        VerticalContentAlignment="Top"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Margin="170,180,0,0" TextWrapping="Wrap"/>
+
+                    <Button x:Name="btnSend" Width="170" Height="30"
+                            HorizontalAlignment="Center" Margin="295,307,271,20" Click="btnSend_Click" >Отправить письмо</Button>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+
+    </DockPanel>
+</Window>
